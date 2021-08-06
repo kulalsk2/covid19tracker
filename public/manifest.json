@@ -1,6 +1,6 @@
 {
-  "short_name": "Wuhan Virus Tracker",
-  "name": "Wuhan Virus Tracker India",
+  "short_name": "covid19tracker",
+  "name": "covid19tracker",
   "icons": [],
   "start_url": ".",
   "display": "standalone",
