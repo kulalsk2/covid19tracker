@@ -1,38 +1,150 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #f5f6fa;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  width: 100%;
+}
+.app_body {
+  display: flex;
+  flex-direction: column;
+}
+.app_right_left {
+  display: flex;
+  flex-direction: row;
+}
+.app_right {
+  display: flex;
+  flex: 0.6;
+  margin: 5px;
+  flex-direction: column;
+}
+.app_right_select {
+  width: 100%;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding-bottom: 5px;
+}
+.app_dropdown {
+  width: 250px;
+}
+.app_select {
+  background-color: white;
+  box-shadow: 0 0 8px -4px rgba(0, 0, 0, 0.6);
+}
+.app_header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  font-size: x-large;
+  background-color: white;
+  box-shadow: 0 0 8px -4px rgba(0, 0, 0, 0.6);
+  border-radius: 9px;
+  margin: 9px;
+}
+.navbar {
+  flex: 0.8;
+  text-align: center;
+}
+.app_status {
+  display: flex;
+  justify-content: space-evenly;
+}
+.app_left {
+  flex: 0.4;
+}
+.stateinfotable {
+  padding-left: 10px;
+  padding-right: 7px;
+}
+.dark-mode {
+  background-color: black;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.dark-mode-header {
+  background-color: #1f1f1f;
+  color: white;
+}
+.MuiList-padding {
+  padding: 0px !important;
+}
+.toggle {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+input[type="checkbox"].checkbox {
+  width: 40px;
+  height: 10px;
+  background: #555;
+  position: relative;
+  border-radius: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  vertical-align: 2px;
+  outline: none;
+}
+input[type="checkbox"].checkbox:checked + label {
+  left: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+input[type="checkbox"].checkbox:focus-visible {
+  outline: solid 2px white;
+}
+input[type="checkbox"].checkbox + label {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: absolute;
+  background: #fff;
+  opacity: 0.9;
+  background-color: cyan;
+}
+.toggle-container {
+  display: flex;
+  margin: 0 auto;
+}
+
+.toggle-container > span {
+  font-size: 1.2em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  margin-top: 4px;
+  margin-right: 2px;
+}
+
+.toggle-container > span:last-child {
+  margin-top: 5px;
+}
+
+@media (max-width: 770px) {
+  .app_right_left {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .card_title {
+    text-align: center !important;
+    font-size: 13px !important;
+    margin: 0px !important;
+  }
+  .MuiCardContent-root {
+    padding: 10px !important;
+  }
+  .Mui-focused .MuiOutlinedInput-notchedOutline {
+    border: none;
   }
 }

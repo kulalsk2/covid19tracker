@@ -1,0 +1,33 @@
+.card {
+  flex: 1;
+  margin: 4px;
+  background-color: white;
+}
+.card--selected {
+  border-top: 10px solid purple;
+}
+.card--color2 {
+  border-color: #3783da;
+}
+.card--color3 {
+  border-color: #2c9947;
+}
+.card--color4 {
+  border-color: #e9113f;
+}
+.card_color1 {
+  color: purple;
+}
+.card_color2 {
+  color: #3783da;
+}
+.card_color3 {
+  color: #2c9947;
+}
+.card_color4 {
+  color: #e9113f;
+}
+.card--darkmode {
+  background-color: #1f1f1f !important;
+  color: white !important;
+}
