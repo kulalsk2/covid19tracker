@@ -59,6 +59,7 @@ function App() {
         setStatesData(DataofStates);
         setSelectedStateInfo(DataofStates[0]);
       });
+    fetch("https://api.covid19india.org/v4/min/timeseries.min.json");
   }, []);
 
   const onStateChange = (event) => {
@@ -188,7 +189,7 @@ function App() {
             />
           </div>
           <div className="app_left">
-            <Charts isDark={darkMode} data={data} />
+            <Charts isDark={darkMode} data={data.cases_time_series} />
           </div>
         </div>
         <div className="stateinfotable">

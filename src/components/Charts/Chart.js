@@ -34,15 +34,13 @@ const options = {
 };
 
 const Charts = ({ data, isDark }) => {
-  const lineChart1 = data.cases_time_series ? (
+  const lineChart1 = data ? (
     <Line
       data={{
-        labels: data.cases_time_series.map(({ date }) => date),
+        labels: data.map(({ date }) => date),
         datasets: [
           {
-            data: data.cases_time_series.map(
-              ({ dailydeceased }) => dailydeceased
-            ),
+            data: data.map(({ dailydeceased }) => dailydeceased),
             label: "Deaths",
             borderColor: "#ff3333",
             fill: true,
@@ -63,15 +61,13 @@ const Charts = ({ data, isDark }) => {
       }}
     />
   ) : null;
-  const lineChart2 = data.cases_time_series ? (
+  const lineChart2 = data ? (
     <Line
       data={{
-        labels: data.cases_time_series.map(({ date }) => date),
+        labels: data.map(({ date }) => date),
         datasets: [
           {
-            data: data.cases_time_series.map(
-              ({ dailyconfirmed }) => dailyconfirmed
-            ),
+            data: data.map(({ dailyconfirmed }) => dailyconfirmed),
             label: "Infected",
             borderColor: "#3333ff",
             backgroundColor: "rgba(56, 56, 244, 0.5)",
@@ -92,15 +88,13 @@ const Charts = ({ data, isDark }) => {
       }}
     />
   ) : null;
-  const lineChart3 = data.cases_time_series ? (
+  const lineChart3 = data ? (
     <Line
       data={{
-        labels: data.cases_time_series.map(({ date }) => date),
+        labels: data.map(({ date }) => date),
         datasets: [
           {
-            data: data.cases_time_series.map(
-              ({ dailyrecovered }) => dailyrecovered
-            ),
+            data: data.map(({ dailyrecovered }) => dailyrecovered),
             label: "Recovered",
             borderColor: "#33ff33",
             fill: true,
