@@ -11,6 +11,7 @@ import "./App.css";
 import Charts from "./components/Charts/Chart";
 import { prettyNumber } from "./components/util";
 import StateInfoTable from "./components/Table/Table";
+
 function App() {
   const [data, setData] = useState({});
   const [darkMode, setDarkMode] = useState(getInitialMode());
@@ -38,7 +39,7 @@ function App() {
   });
 
   useEffect(() => {
-    fetch("https://api.covid19india.org/data.json")
+    fetch("https://data.covid19india.org/data.json")
       .then((response) => response.json())
       .then((data) => {
         setData(data);
@@ -59,7 +60,7 @@ function App() {
         setStatesData(DataofStates);
         setSelectedStateInfo(DataofStates[0]);
       });
-    fetch("https://api.covid19india.org/v4/min/timeseries.min.json");
+    fetch("https://data.covid19india.org/v4/min/timeseries.min.json");
   }, []);
 
   const onStateChange = (event) => {
